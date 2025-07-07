@@ -3,14 +3,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 
-// Your web app's Firebase configuration (demo config - replace with your actual config)
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "demo-api-key",
-  authDomain: "demo-project.firebaseapp.com",
-  projectId: "demo-project",
-  storageBucket: "demo-project.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef123456"
+  apiKey: "AIzaSyAJ6MiQQNwcuH5EJX4BfF7McpdFVgy3NMA",
+  authDomain: "hivili.firebaseapp.com",
+  projectId: "hivili",
+  storageBucket: "hivili.firebasestorage.app",
+  messagingSenderId: "505453776131",
+  appId: "1:505453776131:web:eaced0fee7ecf9e64f2d36",
+  measurementId: "G-YSR7RRXF9V"
 };
 
 // Initialize Firebase

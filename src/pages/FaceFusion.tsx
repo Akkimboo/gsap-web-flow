@@ -77,14 +77,13 @@ const FaceFusion = () => {
 
   const shakeContainer = (containerRef: React.RefObject<HTMLDivElement>) => {
     if (containerRef.current) {
-      gsap.fromTo(containerRef.current, 
-        { x: 0 }, 
-        { 
-          x: [-10, 10, -10, 10, 0], 
-          duration: 0.5, 
-          ease: "power2.out" 
-        }
-      );
+      gsap.to(containerRef.current, { 
+        x: -10, 
+        duration: 0.1, 
+        yoyo: true, 
+        repeat: 3, 
+        ease: "power2.out" 
+      });
     }
   };
 
