@@ -38,15 +38,6 @@ const HeroSection = () => {
         delay: 0.5
       });
 
-      // Floating animation for the title
-      gsap.to(titleRef.current, {
-        y: -10,
-        duration: 3,
-        ease: "power1.inOut",
-        yoyo: true,
-        repeat: -1
-      });
-
       // Glowing effect animation
       gsap.to('.gradient-text', {
         textShadow: '0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.3)',
