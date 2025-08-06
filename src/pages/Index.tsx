@@ -58,65 +58,9 @@ const Index = () => {
         ease: "back.out(1.7)"
       });
 
-      // Why section title animation
-      gsap.fromTo('.why-title', {
-        opacity: 0,
-        x: -100,
-        rotationY: -15
-      }, {
-        opacity: 1,
-        x: 0,
-        rotationY: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: '.why-section',
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleActions: 'play none none reverse'
-        }
-      });
-
-      // Why points staggered animation
-      gsap.fromTo('.why-point', {
-        opacity: 0,
-        x: -50,
-        scale: 0.8
-      }, {
-        opacity: 1,
-        x: 0,
-        scale: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "elastic.out(1, 0.5)",
-        scrollTrigger: {
-          trigger: '.why-section',
-          start: 'top 70%',
-          end: 'bottom 30%',
-          toggleActions: 'play none none reverse'
-        }
-      });
 
       // Content sections scroll animations
       gsap.utils.toArray('.content-section').forEach((section: any, index) => {
-        // Title animation
-        gsap.fromTo(section.querySelector('.content-title'), {
-          opacity: 0,
-          y: 50,
-          scale: 0.9
-        }, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 85%',
-            end: 'bottom 15%',
-            toggleActions: 'play none none reverse'
-          }
-        });
-
         // Image animation with 3D effect
         gsap.fromTo(section.querySelector('.content-image'), {
           opacity: 0,
@@ -132,26 +76,6 @@ const Index = () => {
             trigger: section,
             start: 'top 80%',
             end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-          }
-        });
-
-        // Content text animation
-        gsap.fromTo(section.querySelector('.content-text'), {
-          opacity: 0,
-          y: 30,
-          x: index % 2 === 0 ? -30 : 30
-        }, {
-          opacity: 1,
-          y: 0,
-          x: 0,
-          duration: 0.8,
-          delay: 0.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 75%',
-            end: 'bottom 25%',
             toggleActions: 'play none none reverse'
           }
         });

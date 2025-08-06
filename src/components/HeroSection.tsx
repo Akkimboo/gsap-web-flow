@@ -24,28 +24,6 @@ const HeroSection = () => {
         }
       });
 
-      // Title text reveal animation
-      gsap.fromTo(titleRef.current, {
-        opacity: 0,
-        y: 50,
-        scale: 0.9
-      }, {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 1.5,
-        ease: "power3.out",
-        delay: 0.5
-      });
-
-      // Glowing effect animation
-      gsap.to('.gradient-text', {
-        textShadow: '0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.3)',
-        duration: 2,
-        ease: "power2.inOut",
-        yoyo: true,
-        repeat: -1
-      });
 
     }, heroRef);
 
