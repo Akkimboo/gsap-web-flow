@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Layout from '../components/Layout';
 import HeroSection from '../components/HeroSection';
 import FeatureCards from '../components/FeatureCards';
+import contentImage1 from '../assets/content-image-1.webp';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -153,7 +154,7 @@ const Index = () => {
                 {section.title}
               </h2>
               <div className="content-image bg-gray-800 rounded-lg overflow-hidden mb-6 transform perspective-1000">
-                <div className="h-48 bg-gradient-to-r from-purple-900 to-purple-700"></div>
+                <img src={contentImage1} alt={section.title} className="w-full h-48 object-cover" />
               </div>
               <div className="border-t border-gray-600 pt-6">
                 <p className="content-text text-gray-300 text-lg leading-relaxed">{section.content}</p>
