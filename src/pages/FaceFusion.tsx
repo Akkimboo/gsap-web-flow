@@ -8,6 +8,7 @@ import { Upload } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../components/ui/dialog';
 import { useToast } from '../hooks/use-toast';
+import faceFusionShowcase from '../assets/placeholders/face-fusion-showcase.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -305,7 +306,9 @@ const FaceFusion = () => {
 
         {/* Showcase Image */}
         <div className="page-section max-w-4xl mx-auto animate-on-scroll">
-          <div className="aspect-video bg-gradient-to-r from-purple-900 to-purple-700 rounded-xl"></div>
+          <div className="aspect-video bg-gradient-to-r from-purple-900 to-purple-700 rounded-xl overflow-hidden">
+            <img src={faceFusionShowcase} alt="Face Fusion Technology Showcase" className="w-full h-full object-cover" />
+          </div>
         </div>
 
         {/* Features Sections */}
