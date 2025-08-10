@@ -16,32 +16,32 @@ const UpgradeModal = ({ isOpen, onClose }: UpgradeModalProps) => {
 
   const plans = [
     {
-      name: 'Basic Free',
-      credits: 50,
-      price: 0,
-      id: 'basic',
+      name: 'Starter',
+      credits: 100,
+      price: 1000,
+      id: 'starter',
       icon: Star,
       color: 'from-gray-600 to-gray-700',
-      features: ['50 Credits/Month', 'Basic Support', 'Standard Quality']
+      features: ['100 Credits', 'Standard Quality', 'Basic Support']
+    },
+    {
+      name: 'Growth',
+      credits: 500,
+      price: 4000,
+      id: 'growth',
+      icon: Zap,
+      color: 'from-purple-600 to-purple-700',
+      features: ['500 Credits', 'HD Quality', 'Priority Support', 'Fast Processing'],
+      popular: true
     },
     {
       name: 'Pro',
       credits: 1000,
-      price: 80,
+      price: 7500,
       id: 'pro',
-      icon: Zap,
-      color: 'from-purple-600 to-purple-700',
-      features: ['1000 Credits/Month', 'Priority Support', 'HD Quality', 'Fast Processing'],
-      popular: true
-    },
-    {
-      name: 'Premium',
-      credits: 12000,
-      price: 900,
-      id: 'premium',
       icon: Crown,
       color: 'from-yellow-500 to-yellow-600',
-      features: ['12000 Credits/Year', '24/7 Premium Support', '4K Quality', 'Lightning Fast', 'Early Access']
+      features: ['1000 Credits', '4K Quality', 'Premium Support', 'Lightning Fast', 'Early Access']
     }
   ];
 
