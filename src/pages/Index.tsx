@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Layout from '../components/Layout';
 import HeroSection from '../components/HeroSection';
 import FeatureCards from '../components/FeatureCards';
-import contentImage1 from '../assets/content-image-1.webp';
+import contentImage1 from '../assets/placeholders/content-image-1.webp';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);

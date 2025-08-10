@@ -7,8 +7,8 @@ interface BeforeAfterComparisonProps {
 }
 
 const BeforeAfterComparison: React.FC<BeforeAfterComparisonProps> = ({
-  beforeImage = '/placeholder.svg',
-  afterImage = '/placeholder.svg'
+  beforeImage = '/src/assets/placeholders/before-after-placeholder.svg',
+  afterImage = '/src/assets/placeholders/before-after-placeholder.svg'
 }) => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
