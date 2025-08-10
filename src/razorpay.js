@@ -1,7 +1,7 @@
 
 // Razorpay configuration and payment handling
 
-const RAZORPAY_KEY_ID = "rzp_test_demo_key"; // Replace with your actual Razorpay key
+const RAZORPAY_KEY_ID = "rzp_live_Hbb0xWmV2mFsEH"; // Your live Razorpay key
 
 export const initializeRazorpay = () => {
   return new Promise((resolve) => {
@@ -41,8 +41,13 @@ export const makePayment = async (planDetails) => {
     image: "/favicon.ico",
     order_id: orderData.receipt,
     handler: function (response) {
-      console.log("Payment successful:", response);
-      // Update user credits based on plan
+      console.log("Payment successful! Payment ID:", response.razorpay_payment_id);
+      alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
+      
+      // You can add logic here to update user credits in your preferred storage
+      // For now, we'll just log the plan details
+      console.log("Plan purchased:", planDetails);
+      
       return {
         success: true,
         paymentId: response.razorpay_payment_id,
