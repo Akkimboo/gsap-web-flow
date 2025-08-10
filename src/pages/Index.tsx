@@ -5,7 +5,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Layout from '../components/Layout';
 import HeroSection from '../components/HeroSection';
 import FeatureCards from '../components/FeatureCards';
-import contentImage1 from '../assets/placeholders/content-image-1.webp';
+import aiCreativity from '../assets/placeholders/ai-creativity.webp';
+import artTechCrossroads from '../assets/placeholders/art-tech-crossroads.webp';
+import aiSorcery from '../assets/placeholders/ai-sorcery.webp';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -19,15 +21,15 @@ const Index = () => {
   const contentSections = [{
     title: 'Transform Your Ideas into Stunning Visuals',
     content: 'Step into a world where words weave wonders and faces find new fates. DPIcon is your portal to boundless creativity, powered by cutting-edge AI. From conjuring vivid scenes with a single sentence to reimagining your face in fantastical realms, we turn your wildest whims into breathtaking visuals. Dare to dream – DPIcon makes it real.',
-    image: '/api/placeholder/800/300'
+    image: aiCreativity
   }, {
     title: 'The Spark of a New Era',
     content: 'At DPIcon, we believe creativity shouldn\'t be confined. We\'re pioneers at the crossroads of art and technology, crafting tools that let you sculpt the impossible. Whether you\'re an artist seeking a muse, a visionary with a story, or a soul craving something new, DPIcon is your playground of endless potential.',
-    image: '/api/placeholder/800/300'
+    image: artTechCrossroads
   }, {
     title: 'What Sets Us Apart',
     content: 'AI Sorcery: Advanced algorithms that turn imagination into masterpieces. No Limits, Just Magic: From text to art, face to fantasy – explore it all. Instant Alchemy: Conjure creations faster than a lightning strike. Yours to Command: Simple tools, extraordinary results – no wizardry degree required.',
-    image: '/api/placeholder/800/300'
+    image: aiSorcery
   }];
 
   useEffect(() => {
@@ -154,7 +156,7 @@ const Index = () => {
                 {section.title}
               </h2>
               <div className="content-image bg-gray-800 rounded-lg overflow-hidden mb-6 transform perspective-1000">
-                <img src={contentImage1} alt={section.title} className="w-full h-48 object-cover" />
+                <img src={section.image} alt={section.title} className="w-full h-48 object-cover" />
               </div>
               <div className="border-t border-gray-600 pt-6">
                 <p className="content-text text-gray-300 text-lg leading-relaxed">{section.content}</p>
